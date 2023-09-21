@@ -1,0 +1,79 @@
+package com.ems.servlets;
+
+import jakarta.servlet.http.HttpServlet;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
+import com.ems.dao.EmployeeDAO;
+import com.ems.models.Employee;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class EditProfile
+ */
+@WebServlet(name = "edit", urlPatterns = { "/edit" })
+public class EditProfile extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public EditProfile() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		int num = Integer.parseInt(req.getParameter("empId")); 
+		int empSal = Integer.parseInt(req.getParameter("empSal")); 
+		int deptId = Integer.parseInt(req.getParameter("deptId"));
+		String name = req.getParameter("empName");
+		String gender = req.getParameter("gender");
+		String pass = req.getParameter("pass");
+		String role = req.getParameter("empRole");
+		PrintWriter out = resp.getWriter();
+		/*
+		 * out.println(num); out.println(empSal); out.println(deptId);
+		 * out.println(name); out.println(gender); out.println(pass); out.println(dob);
+		 * out.println(role);
+		 */
+		
+		
+		Employee emp = new Employee();
+		emp.setDeptId(deptId);
+		emp.setEmpId(num);
+		emp.setEmpName(name);
+		emp.setGender(gender);
+		emp.setPass(pass);
+		emp.setRole(role);
+		emp.setSalary(empSal);
+		
+		
+		EmployeeDAO dao = new EmployeeDAO();
+		dao.updateEmployee(emp);
+		try {
+			Thread.sleep(2000);
+		}catch(InterruptedException e) {
+			
+		}
+		resp.sendRedirect("AvailableEmployees");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

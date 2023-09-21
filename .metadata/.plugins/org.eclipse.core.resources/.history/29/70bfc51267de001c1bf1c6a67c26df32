@@ -1,0 +1,296 @@
+body{
+   overflow-x:hidden; 
+ }		
+
+#div1{
+    height:auto;
+    width:auto;
+    margin-:0px;
+    background-color: #3C3F46;
+    padding-top:12px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left:0px;
+    }
+#div2{
+    height:10%;
+    colour:white;
+    width:auto;
+    background-color: #51555E;
+    padding-top:1%;
+   
+    
+    }
+.nav-link{
+    color:white;
+     text-decoration:none;
+     }
+#div3{
+     height:80%;
+     width:auto;
+      }
+.container002-lg{
+     width:auto;
+     height:auto;
+     }
+.slideimages{
+      width:100%;
+      height:100%;
+      }
+
+.carousel-caption{
+       font-family:Lucida Handwriting;
+       }
+.img-fix{
+        height:75%;
+	width:100%;
+	}
+     #heading{
+       font-family:rage;
+        text-align:center;
+        color: #171695;;
+        }    
+
+.button-primary {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #171695;
+    border-color: #171695;
+}
+.displaytext{
+       align:"center";
+       text-decoration:none;
+       color:#666666;
+         }
+
+#div4{
+    background-color:#3C3F46;
+    text-align: center;
+    font-size: 50px;
+     color:white;
+      
+}
+
+.container{
+    position: relative;
+    width:auto;
+    max-width:1140px;
+    box-sizing: border-box;
+    text-align: left;
+    height: auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+}
+    .col-lg{
+    width:auto;
+    float: left;
+    box-sizing: border-box;
+    margin: 0px;
+    padding-top:10px;
+    padding-right:0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+}
+
+  .strapline {
+    font-family:Lucida Handwriting;
+    font-size: 42px;
+    line-height: 32px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+.telephone1 {
+    font-family:Lucida Handwriting;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 34px;
+    letter-spacing: 1px;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size:inherit;
+   }
+
+  .imagelogo{
+    width:40%;
+    margin:5px;
+    padding:5px;
+     padding-left:1%;
+}
+  .imagelogo1{
+    width:13%;
+    margin:5px;
+    padding:5px;
+     padding-left:1%;
+}
+ 
+          
+          .container-lg-fluid{
+            background-color:#3C3F46;
+            color:white;
+            height:15%;
+            font-family:Lucida Handwriting;
+            padding-top:1%;
+           
+           }
+   
+         
+       
+      
+   
+     .heading{ 
+               font-family:Rage;
+               font-size: 32px;
+               line-height: 42px;
+                color: #171695
+                 }
+   #products{
+        width:100%;
+       height:auto;
+       background-color:#E8E8E7; 
+        text-align:center;
+       padding-top:2%;
+       padding-left:2%;
+       padding-bottom:2%;
+      
+     }
+   
+    
+   .container4-fluid{
+            background-color:#3C3F46;
+            color:white;
+            height:auto;
+            font-family:MS Reference Sans Serif bold;
+            }
+   
+    .u-full-width-footer-headline {
+    font-family: 'Roboto', sans-serif;
+    color: #F5F5F5;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+   .u-full-width-footer{
+   font-family: 'Roboto', sans-serif;
+    color: #F5F5F5;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+ .contactbg-lg-fluid{
+               background-image:url(images/pic39.jpg);
+                background-size:cover;
+               height:125%;
+               width:auto;
+               font-family:'The Nautigal', cursive;
+              padding-top:1%;
+             }
+.login-lg-fluid{
+               background-image:url(images/logo.jpg);
+                background-size:cover;
+               height:100%;
+               width:auto;
+               font-family:'The Nautigal', cursive;
+              padding-top:1%;
+             }
+.login1{
+       color:red;
+       margin-top:10%;
+       }
+.login2{
+       color:red;
+  
+       }
+     .container9-lg{
+          height:auto;
+            padding-top:3%;
+          }
+    .container10{
+         background-image:url(images/pic42.jpg);
+         background-size:cover;
+         width:100%;
+         height:100%;
+          color:black;
+            font-family:Arial;
+         
+          }
+     .zzz{
+            color:blue;
+          
+             }
+     .contactbg-lg{
+                 background-image:url(images/pic41.jpg);
+                background-size:cover;
+               height:auto;
+               width:auto;
+               font-family:'The Nautigal', cursive;
+              padding-top:2.5%;
+              }
+         .image1{
+             float:left;
+              padding:1%;
+              padding-left:2%;
+             }
+           .image2{
+             float:right;
+              padding:1%;
+              padding-right:2%;
+             }
+
+ 
+      .overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 31.3%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+ margin-bottom: 75.5px;
+}
+
+.col-lg-4:hover .overlay {
+  opacity: 1;
+}
+ .zoom:hover{
+       transform:scale(1.08);
+       transition:transform 0.9s;
+     }
+ .containerdegsin-lg{
+    background-color: #51555E;
+    color:white;
+}
+ 

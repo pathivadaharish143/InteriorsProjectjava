@@ -1,0 +1,126 @@
+package com.ems.dao;
+
+import java.sql.Connection;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import com.ems.config.DBConfiguration;
+import com.ems.models.customers;
+
+public class customersDAO{
+	DBConfiguration db = new DBConfiguration();
+	Connection con = db.getDB();
+	
+
+	public void registercustomer(customers cust) {
+				
+		try {
+			//Get the connection object
+			
+			String query ="insert into enquirylist values(?,?,?,?,?)";
+			PreparedStatement st = con.prepareStatement(query);
+			st.setString(1, cust.getName());
+			st.setString(2, cust.getGmail());
+			st.setString(3, cust.getPurpose());
+			st.setString(4, cust.getCity());
+			st.setString(5, cust.getPhoneNumber());
+			
+			 st.execute();
+			//con.commit();
+			System.out.println("customer registered successfully");
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Unable to register the customer");
+		}
+	}
+	
+public List<customers>displaycustomer() {
+		List<customers> empList = new ArrayList<customers>();
+		try {
+			String query = "select * from enquirylist";
+			PreparedStatement ps = con.prepareStatement(query);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				customers cust = new customers();
+				cust.setName(rs.getString("name"));
+				cust.setGmail(rs.getString("gmail"));
+				cust.setPurpose(rs.getString("purpose"));
+				cust.setCity(rs.getString("city"));
+				cust.setPhoneNumber(rs.getString("phonenumber"));
+			empList.add(cust);
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return empList;
+	}
+
+public customers displaycustomer(String name) {
+	// TODO Auto-generated method stub
+	customers cust = new customers();
+	cust.setName("customer");
+	try {
+		String query = "select * from employees where name = ?";
+		PreparedStatement st = con.prepareStatement(query);
+		st.setString(1, name);
+		ResultSet rs = st.executeQuery();
+		
+		if(rs.next()) {
+			st.setString(2, cust.getGmail());
+			st.setString(3, cust.getPurpose());
+			st.setString(4, cust.getCity());
+			st.setString(5, cust.getPhoneNumber());
+		}
+		
+		
+	} catch (Exception e) {
+		// TODO: handle exception
+		System.out.println("Unable to display customer");
+	}
+	return cust;
+}
+public void updatecustomer(customers cust) {
+	
+	try {
+		//Get the connection object
+		
+		
+		String query ="update enquirylist set (name=?,gmail=?,purpose=?,city=?,phonenumber=?)";
+		PreparedStatement st = con.prepareStatement(query);
+		st.setString(1, cust.getName());
+		st.setString(2, cust.getGmail());
+		st.setString(3, cust.getPurpose());
+		st.setString(4, cust.getCity());
+		st.setString(5, cust.getPhoneNumber());
+		
+		 st.execute();
+		//con.commit();
+		System.out.println("customer updated successfully");
+	} catch (Exception e) {
+		// TODO: handle exception
+		System.out.println("Unable to update the customer");
+	}
+}
+public void deletecustomer(customers cust) {
+	try {
+		//Get the connection object
+		
+		
+		String query = "delete enquirylist where name=?";
+		PreparedStatement st = con.prepareStatement(query);
+		st.setString(1, cust.getName());
+		st.execute();
+		//con.commit();
+		System.out.println("customer Deleted successfully");
+	} catch (Exception e) {
+		// TODO: handle exception
+		System.out.println("Unable to delete the customer");
+	}
+}
+}

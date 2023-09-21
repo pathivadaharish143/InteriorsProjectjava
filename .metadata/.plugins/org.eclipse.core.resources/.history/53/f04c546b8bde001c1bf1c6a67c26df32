@@ -1,0 +1,50 @@
+package com.ems.servlets;
+
+import jakarta.servlet.http.HttpServlet;
+import java.io.IOException;
+
+import com.ems.dao.customersDAO;
+import com.ems.models.customers;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class DeleteEmployee
+ */
+@WebServlet(name = "delCustomer", urlPatterns = { "/delCustomer" })
+public class DeleteCustomers extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public DeleteCustomers() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String name = request.getParameter("Name");
+
+		customersDAO dao = new customersDAO();
+		customers cust = dao.displaycustomer(name);
+		dao.deletecustomer(cust);
+		System.out.println("Employee got deleted successfully");
+		response.sendRedirect("responses");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
